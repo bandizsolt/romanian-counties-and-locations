@@ -1,4 +1,4 @@
-# Romanian counties and locations (with diacritics, improved version)
+# Romanian counties and locations (with diacritics, improved)
 All counties and locations
 
 updated: 04-01-2018
