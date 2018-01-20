@@ -1,16 +1,4 @@
 --
--- Table structure for table `#__romanian_counties`
---
-
-CREATE TABLE IF NOT EXISTS `#__romanian_counties` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `county_code` varchar(2) NOT NULL DEFAULT '',
-  `county_name` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `idx_county_code` (`county_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;
-
---
 -- Dumping data for table `#__romanian_counties`
 --
 
@@ -57,18 +45,6 @@ INSERT INTO `#__romanian_counties` (`id`, `county_code`, `county_name`) VALUES
 (40, 38, 'VÂLCEA'),
 (41, 39, 'VRANCEA'),
 (42, 40, 'BUCUREȘTI');
-
---
--- Table structure for table `#__romanian_locations`
---
-
-CREATE TABLE IF NOT EXISTS `#__romanian_locations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `county_code` int(10) unsigned NOT NULL DEFAULT 0,
-  `location_name` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
-  KEY `idx_county_code` (`county_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `#__romanian_locations`
