@@ -4,7 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS `#__romanian_counties` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `county_code` varchar(2) NOT NULL DEFAULT '',
+  `county_code` int(2) unsigned NOT NULL DEFAULT 0,
   `county_name` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_county_code` (`county_code`)
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `#__romanian_counties` (
 
 CREATE TABLE IF NOT EXISTS `#__romanian_locations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `county_code` int(10) unsigned NOT NULL DEFAULT 0,
+  `county_code` int(2) unsigned NOT NULL DEFAULT 0,
   `location_name` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `idx_county_code` (`county_code`)
