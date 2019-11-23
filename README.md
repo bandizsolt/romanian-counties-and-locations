@@ -1,4 +1,5 @@
-## Romanian counties and locations (with diacritics, improved) / Toate județele și localitățiile din România
+## Romanian counties and locations (with diacritics, improved)
+## Toate județele și localitățiile din România
 All counties and locations
 
 Updated: 23-11-2019
