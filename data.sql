@@ -50,7 +50,7 @@ INSERT INTO `#__romanian_counties` (`id`, `county_code`, `county_name`) VALUES
 -- Dumping data for table `#__romanian_locations`
 --
 
-INSERT INTO `#__oamgmamr_romanian_locations` (`id`, `siruta`, `county_code`, `location_name`) VALUES
+INSERT INTO `#__romanian_locations` (`id`, `siruta`, `county_code`, `location_name`) VALUES
 (1, 1026, 1, "ALBA IULIA"),
 (2, 1035, 1, "BĂRĂBANȚ"),
 (3, 1044, 1, "MICEȘTI"),
