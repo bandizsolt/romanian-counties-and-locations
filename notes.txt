@@ -1,10 +1,14 @@
 - data from: "sir_diacritic.mdb"
 - filtered the: "FS2" column by the following criteria:
+
 /*
 <>"     " And <>"01" And <>"02" And <>"03" And <>"04" And <>"05" And <>"06" And <>"07" And <>"08" And <>"09" And <>"10" And <>"11" And <>"12" And <>"13" And <>"14" And <>"15" And <>"16" And <>"17" And <>"18" And <>"19" And <>"20" And <>"21" And <>"22" And <>"23" And <>"24" And <>"25" And <>"26" And <>"27" And <>"28" And <>"29" And <>"30" And <>"31" And <>"32" And <>"33" And <>"34" And <>"35" And <>"36" And <>"37" And <>"38" And <>"39" And <>"40" And <>"41" And <>"42"
 */
+
 - the database is ordered by the SIRUTA
 
-- to select the required data: Microsoft Access > open database > Advanced (from Sort & Filter) > Advanced Filter/Sort > choose bottom the Field "FS2" > insert the criteria mentioned above > Toogle Filter
-- to export: Select All > External Data (from menu) > Excel > choose location, check "Export data with formatting and layout." then check the "Export only the selected records."
+- to select the required data: Microsoft Access > open database > Advanced (from Home > Sort & Filter) > Advanced Filter/Sort > choose on the bottom the Field "FS2" > insert the criteria mentioned above > Toogle Filter
+
+- to export: Select All (click to the left upper corner arrow) > External Data (from menu) > Excel > choose location, check "Export data with formatting and layout." then check the "Export only the selected records."
+
 - replace all: "Ş" to "Ș" and "Ţ" to "Ț"

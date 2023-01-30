@@ -4665,7 +4665,7 @@ INSERT INTO `#__romanian_locations` (`id`, `siruta`, `county_code`, `location_na
 (4612, 59201, 12, "JURCA"),
 (4613, 59210, 12, "OSOI"),
 (4614, 59229, 12, "PUSTUȚA"),
-(4615, 59247, 12, "RÂȘCA"),
+(4615, 59247, 12, "RIȘCA"),
 (4616, 59256, 12, "DEALU MARE"),
 (4617, 59265, 12, "LĂPUȘTEȘTI"),
 (4618, 59274, 12, "MĂRCEȘTI"),
