@@ -13,4 +13,4 @@
 
 - replace all: "Ş" to "Ș" and "Ţ" to "Ț"
 
-- correct the case: de, din, lui, Ii, the space after dot "C.A." to "C. A. "
+- correct the case: de, din, lui, Ii, cel, the space after dot "C.A." to "C. A. "
