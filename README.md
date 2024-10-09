@@ -1,9 +1,9 @@
 ## All Romanian counties and locations (with diacritics)
 ## Toate județele și localitățile din România (cu diacritice)
 
-Conține localitățile componente, satele, sectoarele ale capitalei, comunele, orașele, municipiile, județele din România cu clasificarea utilizată de **INS** (Institutul Național de Statistică) **SIRUTA** (Sistemul Informatic al Registrului Unităților Teritorial - Administrative) în format sql. Din această bază de date sunt eliminate municipiile și comunele (care sunt cu SIRUTA alternativă) fiindcă nu avem nevoie de ierarhia între localitățile. Pur și simplu facem legătura între județ și localitatea respectivă (fie sat, municipiu, comună, etc. nu interesează rangul).
+Conține localitățile componente, satele, sectoarele capitalei, comunele, orașele, municipiile și județele din România cu clasificarea utilizată de **INS** (Institutul Național de Statistică) în **SIRUTA** (Sistemul Informatic al Registrului Unităților Teritorial - Administrative) în format SQL. Din această bază de date sunt eliminate municipiile și comunele (care au SIRUTA alternativă) deoarece nu avem nevoie de ierarhia între localități. Pur și simplu facem legătura între județ și localitatea respectivă (fie sat, municipiu, comună, etc. fără a ne interesa rangul).
 
-Registrului SIRUTA se versionează la fiecare 6 luni cu modificările legislative apărute în perioada anterioară.
+Registrul SIRUTA este actualizat la fiecare 6 luni, cu modificările legislative apărute în perioada anterioară.
 
 
 **Updated: 05-03-2024**
