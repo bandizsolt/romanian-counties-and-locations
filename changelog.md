@@ -122,11 +122,96 @@ The linking words `cu`, `pe`, `sub`, `la`, `în` are now lower case, like `de`, 
 - `README.md` rewritten, with separate English and Romanian sections.
 - `notes.txt` updated with the new INS source and the steps for the next update.
 
-### Not changed
+### Open questions (not changed)
 
-- About 47 names where only Wikidata gives a different form and it is not clear which one is correct (for example ȘEBIȘ / SEBIȘ, PIATRA-NEAMȚ / PIATRA NEAMȚ, LEHLIU-GARĂ / LEHLIU GARĂ). These stay as in the INS file.
-- 94 names where only OpenStreetMap gives a different form. These were not checked one by one and stay as in the INS file.
-- New spelling mistakes that appear only in the INS 2026 diacritics table (CIOFLINCENI, ROMĂNEȘTI in Maramureș, GRESU, POPEȘTI LEORDENI) were not taken over.
+For the names below, the sources do not agree, and it is not clear which form is the official one. They are not changed: this database has the same form as the INS file. They are listed here so that they can be checked. Corrections from INS or from anyone who knows the official form are welcome.
+
+**Wikidata has a different form (47 names).** OpenStreetMap has the same form as the INS file, or no entry.
+
+| SIRUTA | County | Name in the INS file and in this database | Name in Wikidata |
+|---|---|---|---|
+| 20448 | BACĂU | DEALU-MARE | DEALU MARE |
+| 26207 | BACĂU | NĂZĂRIOAIA | NAZĂRIOAIA |
+| 30050 | BIHOR | MARȚIHAZ | MĂRȚIHAZ |
+| 29314 | BIHOR | ȘEBIȘ | SEBIȘ |
+| 34388 | BISTRIȚA-NĂSĂUD | DEALU ȘTEFĂNIȚEI | DEALUL ȘTEFĂNIȚEI |
+| 35982 | BOTOȘANI | LISMĂNIȚA | LIȘMĂNIȚA |
+| 43288 | BRĂILA | GRADIȘTEA | GRĂDIȘTEA |
+| 43536 | BRĂILA | NEDEICU | NEDELCU |
+| 43705 | BRĂILA | RACOVIȚĂ | RACOVIȚA |
+| 45156 | BUZĂU | MÂNĂSTIREA RĂTEȘTI | MĂNĂSTIREA RĂTEȘTI |
+| 50040 | BUZĂU | OREAVUL | OREAVU |
+| 53461 | CARAȘ-SEVERIN | OHABIȚA | OHĂBIȚA |
+| 52437 | CARAȘ-SEVERIN | PRISACINA | PRISĂCINA |
+| 63660 | COVASNA | SĂRĂMĂȘ | SĂRĂMAȘ |
+| 93897 | CĂLĂRAȘI | LEHLIU-GARĂ | LEHLIU GARĂ |
+| 77849 | GORJ | DRĂGOENI | DRĂGOIENI |
+| 79040 | GORJ | PEȘTEANA JIU | PEȘTEANA-JIU |
+| 79709 | GORJ | STRÂMBA VULCAN | STRÂMBA-VULCAN |
+| 82546 | GORJ | VÂNATA | VÂNĂTA |
+| 85519 | HARGHITA | VIDACUT | VIDĂCUT |
+| 89598 | HUNEDOARA | BACÂIA | BĂCÂIA |
+| 95649 | IAȘI | SCHEIA | ȘCHEIA |
+| 99888 | IAȘI | ȚIGĂNĂȘI | ȚIGĂNAȘI |
+| 104476 | ILFOV | MICȘUNEȘTII-MOARĂ | MICȘUNEȘTI-MOARĂ |
+| 113634 | MEHEDINȚI | ȘIȘEȘTI | SISEȘTI |
+| 119411 | MUREȘ | CIPĂIENI | CIPAIENI |
+| 121395 | NEAMȚ | BIRA | BÂRA |
+| 121019 | NEAMȚ | IZVORUL ALB | IZVORU ALB |
+| 125043 | NEAMȚ | MĂNĂSTIREA NEAMȚ | MÂNĂSTIREA NEAMȚ |
+| 120735 | NEAMȚ | PIATRA-NEAMȚ | PIATRA NEAMȚ |
+| 135921 | PRAHOVA | MAGULA | MĂGULA |
+| 143986 | SIBIU | NOUL ROMÂN | NOU ROMÂN |
+| 149566 | SUCEAVA | DEMACUȘA | DEMĂCUȘA |
+| 148104 | SUCEAVA | DOLHEȘTII-MARI | DOLHEȘTII MARI |
+| 147287 | SUCEAVA | DUBIUȘCA | DUBIUSCA |
+| 154291 | TELEORMAN | SILIȘTEA-GUMEȘTI | SILIȘTEA GUMEȘTI |
+| 159053 | TIMIȘ | CADAR | CADĂR |
+| 166271 | VASLUI | FOCȘEAȘCA | FOCȘEASCA |
+| 166379 | VASLUI | MANTU | MANȚU |
+| 165327 | VASLUI | PODU PETRIȘ | PODU PIETRIȘ |
+| 162997 | VASLUI | TĂBĂLĂEȘTI | TĂBĂLĂIEȘTI |
+| 176374 | VRANCEA | DEALUL LUNG | DEALU LUNG |
+| 173953 | VÂLCEA | BĂLTĂȚENI | BĂLȚĂȚENI |
+| 172652 | VÂLCEA | FRĂSINA | FRASINA |
+| 171502 | VÂLCEA | IZBĂSEȘTI | IZBĂȘEȘTI |
+| 167749 | VÂLCEA | MOȘOROAȘA | MOSOROASA |
+| 168531 | VÂLCEA | PREOTEȘTI | PREOȚEȘTI |
+
+**OpenStreetMap has a different form (24 names).** Wikidata has the same form as the INS file.
+
+| SIRUTA | County | Name in the INS file and in this database | Name in OpenStreetMap |
+|---|---|---|---|
+| 17646 | ARGEȘ | COSTEȘTI-VÂLSAN | COSTEȘTI-VÂSLAN |
+| 23822 | BACĂU | FERESTRĂU-OITUZ | FERĂSTRĂU-OITUZ |
+| 68422 | DÂMBOVIȚA | DEALU FRUMOS | DEALUL FRUMOS |
+| 76825 | GALAȚI | BRANIȘTEA | BRĂNIȘTEA |
+| 77518 | GALAȚI | VÂRLEZI | VĂRLEZI |
+| 102008 | GIURGIU | NEAJLOVU | NEAJLOV |
+| 102017 | GIURGIU | PODU DOAMNEI | PODUL DOAMNEI |
+| 106032 | GIURGIU | VÂLCELELE | VÂLCELE |
+| 77885 | GORJ | ROMANEȘTI | ROMÂNEȘTI |
+| 78757 | GORJ | VOITEȘTII DIN VALE | VOITEȘTII DE VALE |
+| 87727 | HUNEDOARA | ȘĂULEȘTI | SĂULEȘTI |
+| 97893 | IAȘI | SCHITU HADÂMBULUI | SCHITU HADÂMBU |
+| 97223 | IAȘI | SCOPOSENI | SCOPOȘENI |
+| 110429 | MEHEDINȚI | RUNCUȘORU | RUNCȘOR |
+| 119037 | MUREȘ | COTORINAU | COTORINĂU |
+| 121475 | NEAMȚ | BÂRGĂUANI | BÂRGAUANI |
+| 132397 | PRAHOVA | GRADIȘTEA | GRĂDIȘTEA |
+| 157040 | TIMIȘ | GAVOJDIA | GĂVOJDIA |
+| 158993 | TIMIȘ | ICTAR-BUDINȚI | ICTAR-BUDINȚ |
+| 156758 | TIMIȘ | VĂLCANI | VALCANI |
+| 165755 | VASLUI | DRAXENI | DRĂXENI |
+| 168611 | VÂLCEA | BERBEȘTI | BERBESTI |
+| 168256 | VÂLCEA | COLTEȘTI | COLȚEȘTI |
+| 172064 | VÂLCEA | ȘOLICEȘTI | SOLICEȘTI |
+
+Not listed: the names where OpenStreetMap only leaves out the hyphen (42 names, for example FRASIN-DEAL / FRASIN DEAL), where it still has an INS spelling mistake that is corrected here, or where it uses a different local name.
+
+**Mistakes that are only in the second INS table.** The `siruta.mdb` file of S1 2026 has two tables, `siruta_rez` and `SIR_DIACRITIC`. This database follows `siruta_rez`. `SIR_DIACRITIC` has these different forms, which were not taken over: CIOFLINCENI (105188, correct: CIOFLICENI), ROMĂNEȘTI (107476, correct: ROMÂNEȘTI), GRESU (178144, correct: GREȘU), POPEȘTI LEORDENI (179542, correct: POPEȘTI-LEORDENI). It also still has the old forms BÂLVĂNEȘTII DE JOS (110704) and ABRĂMUT (27178).
+
+**Reported to INS.** The corrected names and the differences between the two INS tables were sent to INS (registraturaINS@insse.ro) on 27.11.2026, with a request to confirm the official forms.
 
 ## Applied at every update
 
