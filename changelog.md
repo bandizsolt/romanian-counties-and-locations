@@ -1,68 +1,136 @@
-# Changed - 27.11.2026
-- data checked against SIRUTA S1 2026 (INS, last update 30.06.2026): same 42 counties and 13755 locations, same SIRUTA codes
-- added the `county_abbr` column to the counties table (official two-letter county abbreviation, e.g. AB, CJ, B - the same code WooCommerce uses for the state field)
-- from county MEHEDINȚI, BÂLVĂNEȘTII DE JOS (SIRUTA 110704) location name changed to BĂSEȘTI (Legea nr. 211/2025, M.O. nr. 1133/08.12.2025)
-- from county BIHOR, ABRĂMUT (SIRUTA 27178) location name corrected to ABRĂMUȚ
-- from county ALBA, ROȘA DE SECAȘ (SIRUTA 6949) location name corrected to ROȘIA DE SECAȘ
-- from county IAȘI, ȘOROGANI (SIRUTA 95783) location name corrected to ȘOROGARI
-- from county BISTRIȚA-NĂSĂUD, SILIVAIȘU DE CÂMPIE (SIRUTA 34431) location name corrected to SILIVAȘU DE CÂMPIE
-- from county ARAD, NADAB (SIRUTA 9477) location name corrected to NĂDAB
-- from county BACĂU, HÂINEALA (SIRUTA 24392) location name corrected to HĂINEALA
-- from county DÂMBOVIȚA, hyphen added: DRĂGĂEȘTI-PĂMÂNTENI (SIRUTA 68020), DRĂGĂEȘTI-UNGURENI (SIRUTA 68039), VALEA LUNGĂ-GORGOTA (SIRUTA 69143), VALEA LUNGĂ-OGREA (SIRUTA 69152), GEMENEA-BRĂTULEȘTI (SIRUTA 69544)
-- from county NEAMȚ, hyphen added: DUMBRAVA-DEAL (SIRUTA 120842)
-- all names compared with Wikidata and OpenStreetMap by SIRUTA code; the following INS spelling mistakes are corrected:
-- from county ALBA, CRACIUNELU DE SUS (SIRUTA 3976) location name corrected to CRĂCIUNELU DE SUS
-- from county ALBA, DUPA DEAL (SIRUTA 6413) location name corrected to DUPĂ DEAL
-- from county ALBA, HANĂȘEȘTI (SIRUTA 4605) location name corrected to HĂNĂȘEȘTI
-- from county ALBA, VALE IN JOS (SIRUTA 6459) location name corrected to VALE ÎN JOS
-- from county ARAD, COVĂSINȚ (SIRUTA 10523) location name corrected to COVĂSÂNȚ
-- from county ARAD, CĂPĂLNAȘ (SIRUTA 10024) location name corrected to CĂPÂLNAȘ
-- from county ARAD, VIRISMORT (SIRUTA 10042) location name corrected to VIRIȘMORT
-- from county ARGEȘ, ALBEȘTII PAMÂNTENI (SIRUTA 13828) location name corrected to ALBEȘTII PĂMÂNTENI
-- from county ARGEȘ, LUNCA GÂRTII (SIRUTA 18894) location name corrected to LUNCA GÂRȚII
-- from county ARGEȘ, MUȘĂȚEȘTI (SIRUTA 17655) location name corrected to MUȘĂTEȘTI
-- from county ARGEȘ, OEȘTII PAMÂNTENI (SIRUTA 15787) location name corrected to OEȘTII PĂMÂNTENI
-- from county ARGEȘ, STEFĂNEȘTI (SIRUTA 19098) location name corrected to ȘTEFĂNEȘTI
-- from county BIHOR, SALIȘTE DE POMEZEU (SIRUTA 30693) location name corrected to SĂLIȘTE DE POMEZEU
-- from county BISTRIȚA-NĂSĂUD, DUPA DEAL (SIRUTA 33916) location name corrected to DUPĂ DEAL
-- from county BISTRIȚA-NĂSĂUD, ILVA MICA (SIRUTA 33373) location name corrected to ILVA MICĂ
-- from county BISTRIȚA-NĂSĂUD, LUNCA SĂTEASCA (SIRUTA 35214) location name corrected to LUNCA SĂTEASCĂ
-- from county BOTOȘANI, SARATA (SIRUTA 38303) location name corrected to SĂRATA
-- from county BOTOȘANI, SARATA-BASARAB (SIRUTA 37654) location name corrected to SĂRATA-BASARAB
-- from county BRAȘOV, BĂRCUT (SIRUTA 41961) location name corrected to BĂRCUȚ
-- from county BRAȘOV, COMANA DE JOS (SIRUTA 40866) location name corrected to COMĂNA DE JOS
-- from county BRAȘOV, COMANA DE SUS (SIRUTA 40875) location name corrected to COMĂNA DE SUS
-- from county BRAȘOV, LUNCA CALNICULUI (SIRUTA 41685) location name corrected to LUNCA CÂLNICULUI
-- from county BUZĂU, CĂLDĂRUȘEANCA (SIRUTA 46885) location name corrected to CĂLDĂRUȘANCA
-- from county CONSTANȚA, SINOIE (SIRUTA 62271) location name corrected to SINOE
-- from county CONSTANȚA, TEPEȘ VODĂ (SIRUTA 62976) location name corrected to ȚEPEȘ VODĂ
-- from county DOLJ, VELESTI (SIRUTA 73451) location name corrected to VELEȘTI
-- from county HARGHITA, CASINU NOU (SIRUTA 85305) location name corrected to CAȘINU NOU
-- from county HARGHITA, GĂLĂUȚAȘ-PÂRÂU (SIRUTA 84497) location name corrected to GĂLĂUȚAȘ-PÂRĂU
-- from county IALOMIȚA, CHIROIU-PAMÂNTENI (SIRUTA 102669) location name corrected to CHIROIU-PĂMÂNTENI
-- from county MARAMUREȘ, ȘISEȘTI (SIRUTA 109103) location name corrected to ȘIȘEȘTI
-- from county MEHEDINȚI, TÂNȚARU (SIRUTA 111088) location name corrected to ȚÂNȚARU
-- from county MUREȘ, DELENII (SIRUTA 115593) location name corrected to DELENI
-- from county MUREȘ, SARMAȘU (SIRUTA 119251) location name corrected to SĂRMAȘU
-- from county MUREȘ, VAIDACUȚA (SIRUTA 119714) location name corrected to VAIDACUTA
-- from county NEAMȚ, VARATEC (SIRUTA 121144) location name corrected to VĂRATEC
-- from county OLT, POTCOAVA FĂLCOENI (SIRUTA 128392) location name corrected to POTCOAVA-FĂLCOENI
-- from county SĂLAJ, RĂSTOLȚU-DEȘERT (SIRUTA 139964) location name corrected to RĂSTOLȚU DEȘERT
-- from county SĂLAJ, TĂMASA (SIRUTA 140949) location name corrected to TĂMAȘA
-- from county TELEORMAN, CĂLUGARU (SIRUTA 152190) location name corrected to CĂLUGĂRU
-- from county TELEORMAN, ROSIORI DE VEDE (SIRUTA 151889) location name corrected to ROȘIORI DE VEDE
-- from county TELEORMAN, VITANESTI (SIRUTA 153785) location name corrected to VITĂNEȘTI
-- from county TIMIȘ, CHARLOTENBURG (SIRUTA 156071) location name corrected to CHARLOTTENBURG
-- from county TIMIȘ, DRĂGSINEȘTI (SIRUTA 156945) location name corrected to DRĂGȘINEȘTI
-- from county TIMIȘ, GLADNA ROMÂNA (SIRUTA 156963) location name corrected to GLADNA ROMÂNĂ
-- from county TIMIȘ, GRABĂȚ (SIRUTA 157488) location name corrected to GRABAȚ
-- from county TIMIȘ, VIȘAG (SIRUTA 159320) location name corrected to VISAG
-- from county VRANCEA, ROMĂNEȘTI (SIRUTA 177067) location name corrected to ROMÂNEȘTI
-- from county VÂLCEA, PLESEȘTI (SIRUTA 172778) location name corrected to PLEȘEȘTI
-- from county VÂLCEA, PĂUSEȘTI-OTĂSĂU (SIRUTA 172046) location name corrected to PĂUȘEȘTI-OTĂSĂU
-- from county VÂLCEA, ROMÂNEȘTI (SIRUTA 172796) location name corrected to ROMANEȘTI
-- in the title case file, the linking words cu, pe, sub, la are now lower case (16 names, e.g. Valea cu Apă, Remeți pe Someș, Poienile de sub Munte, Câmpulung la Tisa)
-- renamed data_corected_character_casing.sql to data_corrected_character_casing.sql
+# Changelog
 
-# Changed - 30.01.2023
-- from county CLUJ, RÂȘCA (SIRUTA 59247) location name changed to RIȘCA
+All changes to the data are listed here, newest first.
+
+The data comes from the SIRUTA register published by INS. Where a name in this database is different from the INS file, the difference is listed below, with the reason and the source that confirms it. Each location keeps its SIRUTA code, so any name can be checked against the INS file.
+
+## 27.11.2026
+
+Checked against SIRUTA S1 2026 (register last updated by INS on 30.06.2026). The counties, the locations and the SIRUTA codes are the same as before: 42 counties and 13755 locations. No location was added, removed or moved to another county. 63 location names changed.
+
+### Added
+
+- `county_abbr` column in the counties table: the official two-letter county abbreviation from the INS county table (AB, CJ, B, ...). This is the code that WooCommerce and e-Factura use for the county.
+
+### Renamed by law
+
+| SIRUTA | County | Name in the INS file | Name in this database | Reason |
+|---|---|---|---|---|
+| 110704 | MEHEDINȚI | BÂLVĂNEȘTII DE JOS | BĂSEȘTI | Renamed by Legea nr. 211/2025 (M.O. nr. 1133/08.12.2025) |
+
+### Corrected by INS
+
+| SIRUTA | County | Name in the INS file | Name in this database | Reason |
+|---|---|---|---|---|
+| 27178 | BIHOR | ABRĂMUT | ABRĂMUȚ | Corrected by INS itself in SIRUTA S1 2026 |
+
+### INS spelling mistakes corrected
+
+The INS file with diacritics contains spelling mistakes (mostly missing diacritics). To find them, all 13755 names were compared by SIRUTA code with two sources that are independent from INS: Wikidata and OpenStreetMap. A name was corrected only when the sources named in the last column give the corrected form.
+
+| SIRUTA | County | Name in the INS file | Name in this database | Confirmed by |
+|---|---|---|---|---|
+| 3976 | ALBA | CRACIUNELU DE SUS | CRĂCIUNELU DE SUS | Wikidata and OpenStreetMap |
+| 6413 | ALBA | DUPA DEAL | DUPĂ DEAL | Wikidata and OpenStreetMap |
+| 4605 | ALBA | HANĂȘEȘTI | HĂNĂȘEȘTI | Wikidata and OpenStreetMap |
+| 6949 | ALBA | ROȘA DE SECAȘ | ROȘIA DE SECAȘ | INS table without diacritics, Wikipedia |
+| 6459 | ALBA | VALE IN JOS | VALE ÎN JOS | Wikidata and OpenStreetMap |
+| 10523 | ARAD | COVĂSINȚ | COVĂSÂNȚ | Wikidata and OpenStreetMap |
+| 10024 | ARAD | CĂPĂLNAȘ | CĂPÂLNAȘ | Wikidata and OpenStreetMap |
+| 9477 | ARAD | NADAB | NĂDAB | INS 2026 diacritics table, Wikipedia |
+| 10042 | ARAD | VIRISMORT | VIRIȘMORT | Wikidata and OpenStreetMap |
+| 13828 | ARGEȘ | ALBEȘTII PAMÂNTENI | ALBEȘTII PĂMÂNTENI | Wikidata (evident missing diacritic) |
+| 18894 | ARGEȘ | LUNCA GÂRTII | LUNCA GÂRȚII | Wikidata and OpenStreetMap |
+| 17655 | ARGEȘ | MUȘĂȚEȘTI | MUȘĂTEȘTI | Wikidata and OpenStreetMap |
+| 15787 | ARGEȘ | OEȘTII PAMÂNTENI | OEȘTII PĂMÂNTENI | Wikidata (evident missing diacritic) |
+| 19098 | ARGEȘ | STEFĂNEȘTI | ȘTEFĂNEȘTI | Wikidata (evident missing diacritic) |
+| 24392 | BACĂU | HÂINEALA | HĂINEALA | INS 2026 diacritics table, Wikipedia |
+| 30693 | BIHOR | SALIȘTE DE POMEZEU | SĂLIȘTE DE POMEZEU | Wikidata and OpenStreetMap |
+| 33916 | BISTRIȚA-NĂSĂUD | DUPA DEAL | DUPĂ DEAL | Wikidata and OpenStreetMap |
+| 33373 | BISTRIȚA-NĂSĂUD | ILVA MICA | ILVA MICĂ | Wikidata and OpenStreetMap |
+| 35214 | BISTRIȚA-NĂSĂUD | LUNCA SĂTEASCA | LUNCA SĂTEASCĂ | Wikidata (evident missing diacritic) |
+| 34431 | BISTRIȚA-NĂSĂUD | SILIVAIȘU DE CÂMPIE | SILIVAȘU DE CÂMPIE | INS 2026 diacritics table, Wikipedia |
+| 38303 | BOTOȘANI | SARATA | SĂRATA | Wikidata and OpenStreetMap |
+| 37654 | BOTOȘANI | SARATA-BASARAB | SĂRATA-BASARAB | Wikidata and OpenStreetMap |
+| 41961 | BRAȘOV | BĂRCUT | BĂRCUȚ | Wikidata and OpenStreetMap |
+| 40866 | BRAȘOV | COMANA DE JOS | COMĂNA DE JOS | Wikidata and OpenStreetMap |
+| 40875 | BRAȘOV | COMANA DE SUS | COMĂNA DE SUS | Wikidata and OpenStreetMap |
+| 41685 | BRAȘOV | LUNCA CALNICULUI | LUNCA CÂLNICULUI | Wikidata and OpenStreetMap |
+| 46885 | BUZĂU | CĂLDĂRUȘEANCA | CĂLDĂRUȘANCA | Wikidata and OpenStreetMap |
+| 62271 | CONSTANȚA | SINOIE | SINOE | Wikidata and OpenStreetMap |
+| 62976 | CONSTANȚA | TEPEȘ VODĂ | ȚEPEȘ VODĂ | Wikidata and OpenStreetMap |
+| 73451 | DOLJ | VELESTI | VELEȘTI | Wikidata (evident missing diacritic) |
+| 85305 | HARGHITA | CASINU NOU | CAȘINU NOU | Wikidata and OpenStreetMap |
+| 84497 | HARGHITA | GĂLĂUȚAȘ-PÂRÂU | GĂLĂUȚAȘ-PÂRĂU | Wikidata and OpenStreetMap |
+| 102669 | IALOMIȚA | CHIROIU-PAMÂNTENI | CHIROIU-PĂMÂNTENI | Wikidata (evident missing diacritic) |
+| 95783 | IAȘI | ȘOROGANI | ȘOROGARI | INS table without diacritics, Wikipedia |
+| 109103 | MARAMUREȘ | ȘISEȘTI | ȘIȘEȘTI | Wikidata and OpenStreetMap |
+| 111088 | MEHEDINȚI | TÂNȚARU | ȚÂNȚARU | Wikidata (evident missing diacritic) |
+| 115593 | MUREȘ | DELENII | DELENI | Wikidata and OpenStreetMap |
+| 119251 | MUREȘ | SARMAȘU | SĂRMAȘU | Wikidata and OpenStreetMap |
+| 119714 | MUREȘ | VAIDACUȚA | VAIDACUTA | Wikidata and OpenStreetMap |
+| 121144 | NEAMȚ | VARATEC | VĂRATEC | Wikidata and OpenStreetMap |
+| 128392 | OLT | POTCOAVA FĂLCOENI | POTCOAVA-FĂLCOENI | Wikidata and OpenStreetMap |
+| 139964 | SĂLAJ | RĂSTOLȚU-DEȘERT | RĂSTOLȚU DEȘERT | Wikidata and OpenStreetMap |
+| 140949 | SĂLAJ | TĂMASA | TĂMAȘA | Wikidata and OpenStreetMap |
+| 152190 | TELEORMAN | CĂLUGARU | CĂLUGĂRU | Wikidata and OpenStreetMap |
+| 151889 | TELEORMAN | ROSIORI DE VEDE | ROȘIORI DE VEDE | Wikidata (OpenStreetMap has ROȘIORII DE VEDE) |
+| 153785 | TELEORMAN | VITANESTI | VITĂNEȘTI | Wikidata and OpenStreetMap |
+| 156071 | TIMIȘ | CHARLOTENBURG | CHARLOTTENBURG | Wikidata and OpenStreetMap |
+| 156945 | TIMIȘ | DRĂGSINEȘTI | DRĂGȘINEȘTI | Wikidata (evident missing diacritic) |
+| 156963 | TIMIȘ | GLADNA ROMÂNA | GLADNA ROMÂNĂ | Wikidata and OpenStreetMap |
+| 157488 | TIMIȘ | GRABĂȚ | GRABAȚ | Wikidata and OpenStreetMap |
+| 159320 | TIMIȘ | VIȘAG | VISAG | Wikidata and OpenStreetMap |
+| 177067 | VRANCEA | ROMĂNEȘTI | ROMÂNEȘTI | Wikidata (evident missing diacritic) |
+| 172778 | VÂLCEA | PLESEȘTI | PLEȘEȘTI | Wikidata (evident missing diacritic) |
+| 172046 | VÂLCEA | PĂUSEȘTI-OTĂSĂU | PĂUȘEȘTI-OTĂSĂU | Wikidata (evident missing diacritic) |
+| 172796 | VÂLCEA | ROMÂNEȘTI | ROMANEȘTI | Wikidata and OpenStreetMap |
+
+### Hyphen added
+
+The INS table without diacritics and Wikipedia write these names with a hyphen. The INS table with diacritics leaves it out.
+
+| SIRUTA | County | Name in the INS file | Name in this database | Confirmed by |
+|---|---|---|---|---|
+| 68020 | DÂMBOVIȚA | DRĂGĂEȘTI PĂMÂNTENI | DRĂGĂEȘTI-PĂMÂNTENI | INS table without diacritics, Wikipedia |
+| 68039 | DÂMBOVIȚA | DRĂGĂEȘTI UNGURENI | DRĂGĂEȘTI-UNGURENI | INS table without diacritics, Wikipedia |
+| 69544 | DÂMBOVIȚA | GEMENEA BRĂTULEȘTI | GEMENEA-BRĂTULEȘTI | INS table without diacritics, Wikipedia |
+| 69143 | DÂMBOVIȚA | VALEA LUNGĂ GORGOTA | VALEA LUNGĂ-GORGOTA | INS table without diacritics, Wikipedia |
+| 69152 | DÂMBOVIȚA | VALEA LUNGĂ OGREA | VALEA LUNGĂ-OGREA | INS table without diacritics, Wikipedia |
+| 120842 | NEAMȚ | DUMBRAVA DEAL | DUMBRAVA-DEAL | INS table without diacritics, Wikipedia |
+
+### Letter case (only in `data_corrected_character_casing.sql`)
+
+The linking words `cu`, `pe`, `sub`, `la`, `în` are now lower case, like `de`, `din`, `lui`, `cel` already were. This changes 17 names, for example Valea cu Apă, Remeți pe Someș, Poienile de sub Munte, Câmpulung la Tisa, Vale în Jos.
+
+### Files
+
+- `data_corected_character_casing.sql` renamed to `data_corrected_character_casing.sql` (spelling of the file name).
+- `README.md` rewritten, with separate English and Romanian sections.
+
+### Not changed
+
+- About 47 names where only Wikidata gives a different form and it is not clear which one is correct (for example ȘEBIȘ / SEBIȘ, PIATRA-NEAMȚ / PIATRA NEAMȚ, LEHLIU-GARĂ / LEHLIU GARĂ). These stay as in the INS file.
+- 94 names where only OpenStreetMap gives a different form. These were not checked one by one and stay as in the INS file.
+- New spelling mistakes that appear only in the INS 2026 diacritics table (CIOFLINCENI, ROMĂNEȘTI in Maramureș, GRESU, POPEȘTI LEORDENI) were not taken over.
+
+## Applied at every update
+
+These differences from the INS file are kept at every update (see `notes.txt`).
+
+- All names: the cedilla letters Ş and Ţ are replaced with the correct Romanian letters Ș and Ț.
+- A space is added after the dots in initials. The INS file writes them without it:
+
+| SIRUTA | County | Name in the INS file | Name in this database |
+|---|---|---|---|
+| 45824 | BUZĂU | C.A. ROSETTI | C. A. ROSETTI |
+| 159892 | TULCEA | C.A.ROSETTI | C. A. ROSETTI |
+| 161534 | TULCEA | I.C.BRĂTIANU | I. C. BRĂTIANU |
+| 95621 | IAȘI | ALEXANDRU I.CUZA | ALEXANDRU I. CUZA |
+| 103050 | CĂLĂRAȘI | ALEXANDRU I.CUZA | ALEXANDRU I. CUZA |
+
+## 30.01.2023
+
+| SIRUTA | County | Old name | New name |
+|---|---|---|---|
+| 59247 | CLUJ | RÂȘCA | RIȘCA |
