@@ -20,7 +20,7 @@ The territorial-administrative units themselves (municipalities, towns and commu
 |---|---|
 | `install.sql` | Table structure |
 | `data.sql` | Data, names in upper case (as published by INS) |
-| `data_corected_character_casing.sql` | The same data, names in title case |
+| `data_corrected_character_casing.sql` | The same data, names in title case |
 | `changelog.md` | Changes and name corrections |
 | `source/` | The original INS archive |
 
@@ -83,7 +83,7 @@ Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comune
 |---|---|
 | `install.sql` | Structura tabelelor |
 | `data.sql` | Datele, cu denumirile scrise cu majuscule (ca în fișierul INS) |
-| `data_corected_character_casing.sql` | Aceleași date, cu denumirile scrise cu inițială majusculă |
+| `data_corrected_character_casing.sql` | Aceleași date, cu denumirile scrise cu inițială majusculă |
 | `changelog.md` | Modificări și corecturi de denumiri |
 | `source/` | Arhiva originală de la INS |
 

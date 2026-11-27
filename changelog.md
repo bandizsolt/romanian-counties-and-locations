@@ -10,6 +10,59 @@
 - from county BACĂU, HÂINEALA (SIRUTA 24392) location name corrected to HĂINEALA
 - from county DÂMBOVIȚA, hyphen added: DRĂGĂEȘTI-PĂMÂNTENI (SIRUTA 68020), DRĂGĂEȘTI-UNGURENI (SIRUTA 68039), VALEA LUNGĂ-GORGOTA (SIRUTA 69143), VALEA LUNGĂ-OGREA (SIRUTA 69152), GEMENEA-BRĂTULEȘTI (SIRUTA 69544)
 - from county NEAMȚ, hyphen added: DUMBRAVA-DEAL (SIRUTA 120842)
+- all names compared with Wikidata and OpenStreetMap by SIRUTA code; the following INS spelling mistakes are corrected:
+- from county ALBA, CRACIUNELU DE SUS (SIRUTA 3976) location name corrected to CRĂCIUNELU DE SUS
+- from county ALBA, DUPA DEAL (SIRUTA 6413) location name corrected to DUPĂ DEAL
+- from county ALBA, HANĂȘEȘTI (SIRUTA 4605) location name corrected to HĂNĂȘEȘTI
+- from county ALBA, VALE IN JOS (SIRUTA 6459) location name corrected to VALE ÎN JOS
+- from county ARAD, COVĂSINȚ (SIRUTA 10523) location name corrected to COVĂSÂNȚ
+- from county ARAD, CĂPĂLNAȘ (SIRUTA 10024) location name corrected to CĂPÂLNAȘ
+- from county ARAD, VIRISMORT (SIRUTA 10042) location name corrected to VIRIȘMORT
+- from county ARGEȘ, ALBEȘTII PAMÂNTENI (SIRUTA 13828) location name corrected to ALBEȘTII PĂMÂNTENI
+- from county ARGEȘ, LUNCA GÂRTII (SIRUTA 18894) location name corrected to LUNCA GÂRȚII
+- from county ARGEȘ, MUȘĂȚEȘTI (SIRUTA 17655) location name corrected to MUȘĂTEȘTI
+- from county ARGEȘ, OEȘTII PAMÂNTENI (SIRUTA 15787) location name corrected to OEȘTII PĂMÂNTENI
+- from county ARGEȘ, STEFĂNEȘTI (SIRUTA 19098) location name corrected to ȘTEFĂNEȘTI
+- from county BIHOR, SALIȘTE DE POMEZEU (SIRUTA 30693) location name corrected to SĂLIȘTE DE POMEZEU
+- from county BISTRIȚA-NĂSĂUD, DUPA DEAL (SIRUTA 33916) location name corrected to DUPĂ DEAL
+- from county BISTRIȚA-NĂSĂUD, ILVA MICA (SIRUTA 33373) location name corrected to ILVA MICĂ
+- from county BISTRIȚA-NĂSĂUD, LUNCA SĂTEASCA (SIRUTA 35214) location name corrected to LUNCA SĂTEASCĂ
+- from county BOTOȘANI, SARATA (SIRUTA 38303) location name corrected to SĂRATA
+- from county BOTOȘANI, SARATA-BASARAB (SIRUTA 37654) location name corrected to SĂRATA-BASARAB
+- from county BRAȘOV, BĂRCUT (SIRUTA 41961) location name corrected to BĂRCUȚ
+- from county BRAȘOV, COMANA DE JOS (SIRUTA 40866) location name corrected to COMĂNA DE JOS
+- from county BRAȘOV, COMANA DE SUS (SIRUTA 40875) location name corrected to COMĂNA DE SUS
+- from county BRAȘOV, LUNCA CALNICULUI (SIRUTA 41685) location name corrected to LUNCA CÂLNICULUI
+- from county BUZĂU, CĂLDĂRUȘEANCA (SIRUTA 46885) location name corrected to CĂLDĂRUȘANCA
+- from county CONSTANȚA, SINOIE (SIRUTA 62271) location name corrected to SINOE
+- from county CONSTANȚA, TEPEȘ VODĂ (SIRUTA 62976) location name corrected to ȚEPEȘ VODĂ
+- from county DOLJ, VELESTI (SIRUTA 73451) location name corrected to VELEȘTI
+- from county HARGHITA, CASINU NOU (SIRUTA 85305) location name corrected to CAȘINU NOU
+- from county HARGHITA, GĂLĂUȚAȘ-PÂRÂU (SIRUTA 84497) location name corrected to GĂLĂUȚAȘ-PÂRĂU
+- from county IALOMIȚA, CHIROIU-PAMÂNTENI (SIRUTA 102669) location name corrected to CHIROIU-PĂMÂNTENI
+- from county MARAMUREȘ, ȘISEȘTI (SIRUTA 109103) location name corrected to ȘIȘEȘTI
+- from county MEHEDINȚI, TÂNȚARU (SIRUTA 111088) location name corrected to ȚÂNȚARU
+- from county MUREȘ, DELENII (SIRUTA 115593) location name corrected to DELENI
+- from county MUREȘ, SARMAȘU (SIRUTA 119251) location name corrected to SĂRMAȘU
+- from county MUREȘ, VAIDACUȚA (SIRUTA 119714) location name corrected to VAIDACUTA
+- from county NEAMȚ, VARATEC (SIRUTA 121144) location name corrected to VĂRATEC
+- from county OLT, POTCOAVA FĂLCOENI (SIRUTA 128392) location name corrected to POTCOAVA-FĂLCOENI
+- from county SĂLAJ, RĂSTOLȚU-DEȘERT (SIRUTA 139964) location name corrected to RĂSTOLȚU DEȘERT
+- from county SĂLAJ, TĂMASA (SIRUTA 140949) location name corrected to TĂMAȘA
+- from county TELEORMAN, CĂLUGARU (SIRUTA 152190) location name corrected to CĂLUGĂRU
+- from county TELEORMAN, ROSIORI DE VEDE (SIRUTA 151889) location name corrected to ROȘIORI DE VEDE
+- from county TELEORMAN, VITANESTI (SIRUTA 153785) location name corrected to VITĂNEȘTI
+- from county TIMIȘ, CHARLOTENBURG (SIRUTA 156071) location name corrected to CHARLOTTENBURG
+- from county TIMIȘ, DRĂGSINEȘTI (SIRUTA 156945) location name corrected to DRĂGȘINEȘTI
+- from county TIMIȘ, GLADNA ROMÂNA (SIRUTA 156963) location name corrected to GLADNA ROMÂNĂ
+- from county TIMIȘ, GRABĂȚ (SIRUTA 157488) location name corrected to GRABAȚ
+- from county TIMIȘ, VIȘAG (SIRUTA 159320) location name corrected to VISAG
+- from county VRANCEA, ROMĂNEȘTI (SIRUTA 177067) location name corrected to ROMÂNEȘTI
+- from county VÂLCEA, PLESEȘTI (SIRUTA 172778) location name corrected to PLEȘEȘTI
+- from county VÂLCEA, PĂUSEȘTI-OTĂSĂU (SIRUTA 172046) location name corrected to PĂUȘEȘTI-OTĂSĂU
+- from county VÂLCEA, ROMÂNEȘTI (SIRUTA 172796) location name corrected to ROMANEȘTI
+- in the title case file, the linking words cu, pe, sub, la are now lower case (16 names, e.g. Valea cu Apă, Remeți pe Someș, Poienile de sub Munte, Câmpulung la Tisa)
+- renamed data_corected_character_casing.sql to data_corrected_character_casing.sql
 
 # Changed - 30.01.2023
 - from county CLUJ, RÂȘCA (SIRUTA 59247) location name changed to RIȘCA
