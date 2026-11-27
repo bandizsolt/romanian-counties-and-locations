@@ -21,8 +21,9 @@ The territorial-administrative units themselves (municipalities, towns and commu
 | `install.sql` | Table structure |
 | `data.sql` | Data, names in upper case (as published by INS) |
 | `data_corrected_character_casing.sql` | The same data, names in title case |
+| `update.sql` | Update for an existing installation (new column and corrected names) |
 | `changelog.md` | Changes and name corrections |
-| `source/` | The original INS archive |
+| `source/` | The original INS archives |
 
 ## Tables
 
@@ -47,7 +48,8 @@ The territorial-administrative units themselves (municipalities, towns and commu
 ## Usage
 
 1. Replace the `#__` table prefix with your own prefix (or remove it).
-2. Run `install.sql`, then one of the two data files.
+2. New installation: run `install.sql`, then one of the two data files.
+3. Existing installation (data older than 27-11-2026): run `update.sql` once. It keeps your letter case (upper case or title case).
 
 ## Source
 
@@ -84,8 +86,9 @@ Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comune
 | `install.sql` | Structura tabelelor |
 | `data.sql` | Datele, cu denumirile scrise cu majuscule (ca în fișierul INS) |
 | `data_corrected_character_casing.sql` | Aceleași date, cu denumirile scrise cu inițială majusculă |
+| `update.sql` | Actualizare pentru o instalare existentă (coloana nouă și denumirile corectate) |
 | `changelog.md` | Modificări și corecturi de denumiri |
-| `source/` | Arhiva originală de la INS |
+| `source/` | Arhivele originale de la INS |
 
 ## Tabele
 
@@ -110,7 +113,8 @@ Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comune
 ## Utilizare
 
 1. Înlocuiți prefixul `#__` al tabelelor cu prefixul propriu (sau ștergeți-l).
-2. Rulați `install.sql`, apoi unul dintre cele două fișiere de date.
+2. Instalare nouă: rulați `install.sql`, apoi unul dintre cele două fișiere de date.
+3. Instalare existentă (date mai vechi de 27-11-2026): rulați `update.sql` o singură dată. Păstrează scrierea folosită (cu majuscule sau cu inițială majusculă).
 
 ## Sursă
 

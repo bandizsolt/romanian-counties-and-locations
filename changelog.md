@@ -11,6 +11,19 @@ Checked against SIRUTA S1 2026 (register last updated by INS on 30.06.2026). The
 ### Added
 
 - `county_abbr` column in the counties table: the official two-letter county abbreviation from the INS county table (AB, CJ, B, ...). This is the code that WooCommerce and e-Factura use for the county.
+- `update.sql`: update script for an existing installation. It adds the `county_abbr` column and applies the corrected names by SIRUTA code. It works with both data files and keeps the letter case of the installation.
+- `source/SIRUTA_S1_2026.rar`: the INS archive this version was checked against. The 2023 archive is kept.
+- `.gitattributes`: the same line endings (LF) for all text files.
+
+### Changed in the SQL files
+
+- Location names are now in single quotes instead of double quotes. Double quotes made the import fail in `ANSI_QUOTES` mode and in other databases.
+- `SET NAMES utf8mb4;` added as the first line of the data files, so the diacritics are imported correctly on any connection.
+- The data itself is not affected by these two changes.
+
+### Tested
+
+On MariaDB 11.8: a new installation with each data file; `update.sql` on the previous version with each data file (the result is identical to a new installation); import in `ANSI_QUOTES` mode; import on a latin1 connection.
 
 ### Renamed by law
 
@@ -107,6 +120,7 @@ The linking words `cu`, `pe`, `sub`, `la`, `în` are now lower case, like `de`, 
 
 - `data_corected_character_casing.sql` renamed to `data_corrected_character_casing.sql` (spelling of the file name).
 - `README.md` rewritten, with separate English and Romanian sections.
+- `notes.txt` updated with the new INS source and the steps for the next update.
 
 ### Not changed
 

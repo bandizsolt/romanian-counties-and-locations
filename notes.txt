@@ -1,3 +1,4 @@
+- source: https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (latest), the "siruta.mdb" file, table "siruta_rez"
 - data from: "siruta.mdb"
 - filtered the: "FS2" column by the following criteria:
 
@@ -7,10 +8,16 @@
 
 - you can order the database by the SIRUTA
 
-- to select the required data: Microsoft Access > open database > Advanced (from Home > Sort & Filter) > Advanced Filter/Sort > choose on the bottom the Field "FS2" > insert the criteria mentioned above > Toogle Filter
+- to select the required data: Microsoft Access > open database > Advanced (from Home > Sort & Filter) > Advanced Filter/Sort > choose on the bottom the Field "FS2" > insert the criteria mentioned above > Toggle Filter
 
 - to export: Select All (click to the left upper corner arrow) > External Data (from menu) > Excel > choose location, check "Export data with formatting and layout." then check the "Export only the selected records."
 
 - replace all: "Ş" to "Ș" and "Ţ" to "Ț"
 
 - correct the case: de, din, lui, cu, pe, sub, la, în, Ii, cel, the space after dot "C.A." to "C. A. "
+
+- apply again the name corrections listed in changelog.md, as long as the INS file still contains the mistakes
+
+- in the data files use single quotes for the names and keep "SET NAMES utf8mb4;" on the first line
+
+- add the changed names to update.sql and to changelog.md
