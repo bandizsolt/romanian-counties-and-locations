@@ -6,11 +6,13 @@ Conține toate localitățile din România (sate, localități componente și lo
 Registrul SIRUTA este actualizat la fiecare 6 luni, cu modificările legislative apărute în perioada anterioară.
 
 
-**Updated: 05-03-2024**
+**Updated: 27-11-2026**
 
 Total: **42** counties (41 județe + București) and **13755** locations (SQL format)
 
-Source:
-https://insse.ro/cms/ro > Baze de date și metadate statistice > Nomenclatoare statistice > http://80.96.186.4:81/senin/ > View Classification Data > SIRUTA > select the latest year if exist
+Each county also has its official two-letter abbreviation (`county_abbr`, e.g. AB, CJ, B), and each location has its SIRUTA code.
 
-"siruta.mdb" file last modification: 16.10.2023
+Source:
+https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (select the latest one)
+
+Checked against SIRUTA S1 2026 (registry last update: 30.06.2026). Some location names are corrected compared to the INS file, see changelog.md.

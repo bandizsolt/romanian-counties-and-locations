@@ -5,9 +5,11 @@
 CREATE TABLE IF NOT EXISTS `#__romanian_counties` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `county_code` int(2) unsigned NOT NULL DEFAULT 0,
+  `county_abbr` varchar(2) NOT NULL DEFAULT '',
   `county_name` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `county_code` (`county_code`)
+  UNIQUE KEY `county_code` (`county_code`),
+  UNIQUE KEY `county_abbr` (`county_abbr`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;
 
 --
