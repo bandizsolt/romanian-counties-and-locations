@@ -20,4 +20,6 @@
 
 - in the data files use single quotes for the names and keep "SET NAMES utf8mb4;" on the first line
 
+- fill "uat_siruta" from the "SIRSUP" column and "uat_name" from the name of that row (without MUNICIPIUL / ORAȘ)
+
 - add the changed names to update.sql and to changelog.md

@@ -11,7 +11,8 @@ Checked against SIRUTA S1 2026 (register last updated by INS on 30.06.2026). The
 ### Added
 
 - `county_abbr` column in the counties table: the official two-letter county abbreviation from the INS county table (AB, CJ, B, ...). This is the code that WooCommerce and e-Factura use for the county.
-- `update.sql`: update script for an existing installation. It adds the `county_abbr` column and applies the corrected names by SIRUTA code. It works with both data files and keeps the letter case of the installation.
+- `uat_siruta` and `uat_name` columns in the locations table: the SIRUTA code and the name of the commune, town or municipality (UAT) each location belongs to, taken from the INS file (`SIRSUP`). Inside a county, 889 locations share their name with another one (for example 9 locations called POPEȘTI in VÂLCEA). With `uat_name` every location is unique inside its county. For București the unit is BUCUREȘTI.
+- `update.sql`: update script for an existing installation. It adds the `county_abbr`, `uat_siruta` and `uat_name` columns and applies the corrected names by SIRUTA code. It works with both data files and keeps the letter case of the installation.
 - `source/SIRUTA_S1_2026.rar`: the INS archive this version was checked against. The 2023 archive is kept.
 - `.gitattributes`: the same line endings (LF) for all text files.
 
@@ -23,7 +24,7 @@ Checked against SIRUTA S1 2026 (register last updated by INS on 30.06.2026). The
 
 ### Tested
 
-On MariaDB 11.8: a new installation with each data file; `update.sql` on the previous version with each data file (the result is identical to a new installation); import in `ANSI_QUOTES` mode; import on a latin1 connection.
+On MariaDB 11.8: a new installation with each data file; `update.sql` on the previous version with each data file (the result is identical to a new installation); no two locations in a county with the same name and the same unit; import in `ANSI_QUOTES` mode; import on a latin1 connection.
 
 ### Renamed by law
 
@@ -98,6 +99,16 @@ The INS file with diacritics contains spelling mistakes (mostly missing diacriti
 | 172778 | VÂLCEA | PLESEȘTI | PLEȘEȘTI | Wikidata (evident missing diacritic) |
 | 172046 | VÂLCEA | PĂUSEȘTI-OTĂSĂU | PĂUȘEȘTI-OTĂSĂU | Wikidata (evident missing diacritic) |
 | 172796 | VÂLCEA | ROMÂNEȘTI | ROMANEȘTI | Wikidata and OpenStreetMap |
+
+### Names of communes, towns and municipalities (`uat_name`)
+
+The INS file writes these units as MUNICIPIUL ALBA IULIA, ORAȘ ABRUD, ALBAC. Here the words MUNICIPIUL and ORAȘ are left out. Where the unit has the same name as its seat locality, it has the same corrected form as that locality (for example SILIVAȘU DE CÂMPIE, COVĂSÂNȚ, ILVA MICĂ, C. A. ROSETTI). Three more names are different from the INS file:
+
+| SIRUTA | County | Name in the INS file | Name in this database | Reason |
+|---|---|---|---|---|
+| 40857 | BRAȘOV | COMANA | COMĂNA | Same as its villages COMĂNA DE JOS and COMĂNA DE SUS; Wikidata |
+| 93281 | CĂLĂRAȘI | CUZA VODA | CUZA VODĂ | Missing diacritic; the INS file has CUZA VODĂ for the village; Wikidata |
+| 130366 | OLT | SÂRBII - MĂGURA | SÂRBII-MĂGURA | Spaces around the hyphen removed; Wikidata |
 
 ### Hyphen added
 
