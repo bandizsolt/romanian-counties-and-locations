@@ -28,13 +28,13 @@ On MariaDB 11.8: a new installation with each data file; `update.sql` on the pre
 
 ### Renamed by law
 
-| SIRUTA | County | Name in the INS file | Name in this database | Reason |
+| SIRUTA | County | Old name | New name | Reason |
 |---|---|---|---|---|
 | 110704 | MEHEDINȚI | BÂLVĂNEȘTII DE JOS | BĂSEȘTI | Renamed by Legea nr. 211/2025 (M.O. nr. 1133/08.12.2025) |
 
 ### Corrected by INS
 
-| SIRUTA | County | Name in the INS file | Name in this database | Reason |
+| SIRUTA | County | Old name | New name | Reason |
 |---|---|---|---|---|
 | 27178 | BIHOR | ABRĂMUT | ABRĂMUȚ | Corrected by INS itself in SIRUTA S1 2026 |
 
@@ -188,6 +188,8 @@ For the names below, the sources do not agree, and it is not clear which form is
 | 171502 | VÂLCEA | IZBĂSEȘTI | IZBĂȘEȘTI |
 | 167749 | VÂLCEA | MOȘOROAȘA | MOSOROASA |
 | 168531 | VÂLCEA | PREOTEȘTI | PREOȚEȘTI |
+
+One of these names is written in two ways inside the INS file itself: the village GRADIȘTEA (43288, BRĂILA) belongs to the commune that INS writes GRĂDIȘTEA (43279). Both are kept here as INS has them.
 
 **OpenStreetMap has a different form (24 names).** Wikidata has the same form as the INS file.
 

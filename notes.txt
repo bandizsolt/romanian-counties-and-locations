@@ -1,5 +1,4 @@
 - source: https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (latest), the "siruta.mdb" file, table "siruta_rez"
-- data from: "siruta.mdb"
 - filtered the: "FS2" column by the following criteria:
 
 /*

@@ -24,6 +24,7 @@ The territorial-administrative units themselves (municipalities, towns and commu
 | `data_corrected_character_casing.sql` | The same data, names in title case |
 | `update.sql` | Update for an existing installation (new columns and corrected names) |
 | `changelog.md` | Changes and name corrections |
+| `notes.txt` | Steps for updating the data from the INS file |
 | `source/` | The original INS archives |
 
 ## Tables
@@ -33,7 +34,7 @@ The territorial-administrative units themselves (municipalities, towns and commu
 | Column | Description |
 |---|---|
 | `id` | Primary key |
-| `county_code` | INS county code (1-52) |
+| `county_code` | INS county code (1-40, 51, 52) |
 | `county_abbr` | Official two-letter abbreviation (e.g. `AB`, `CJ`, `B`) |
 | `county_name` | County name |
 
@@ -105,6 +106,7 @@ Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comune
 | `data_corrected_character_casing.sql` | Aceleași date, cu denumirile scrise cu inițială majusculă |
 | `update.sql` | Actualizare pentru o instalare existentă (coloanele noi și denumirile corectate) |
 | `changelog.md` | Modificări și corecturi de denumiri |
+| `notes.txt` | Pașii pentru actualizarea datelor din fișierul INS |
 | `source/` | Arhivele originale de la INS |
 
 ## Tabele
@@ -114,7 +116,7 @@ Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comune
 | Coloană | Descriere |
 |---|---|
 | `id` | Cheie primară |
-| `county_code` | Codul de județ INS (1-52) |
+| `county_code` | Codul de județ INS (1-40, 51, 52) |
 | `county_abbr` | Abrevierea oficială de două litere (de ex. `AB`, `CJ`, `B`) |
 | `county_name` | Denumirea județului |
 
