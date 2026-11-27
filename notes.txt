@@ -1,9 +1,42 @@
+UPDATE WITH THE SCRIPT (tools/build.py)
+
+- source: https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (latest), download the archive into "source/"
+
+- run: python tools/build.py
+  it unpacks the newest archive from "source/", reads "SIRUTA.xls", applies the steps below and the name corrections from "tools/corrections.csv", then writes data.sql and data_corrected_character_casing.sql
+
+- needs: Python 3 with the "xlrd" package (pip install -r tools/requirements.txt) and a tool to unpack the archive (7-Zip, unrar or bsdtar; the "tar" of Windows 10/11 is enough)
+
+- "SIRUTA.xls" has the same rows as the table "siruta_rez" of "siruta.mdb". To read the .mdb file instead: python tools/build.py --from mdb
+  it needs mdbtools ("mdb-export") or a running Docker. The script does this by itself when the archive has no "SIRUTA.xls" (the older archives)
+
+- the two files can differ in a few names: for S1 2026 "SIRUTA.xls" already has NĂDAB, HĂINEALA and SILIVAȘU DE CÂMPIE, "siruta.mdb" still has the mistakes. These rows stay in tools/corrections.csv, so both files give the same result
+
+- read the report of the script:
+  "added / removed / changed" are the differences from the data files in the repo
+  "note correction ...: this INS file already has ..." = INS corrected the name in this file; when "siruta.mdb" has it too (--from mdb --check shows no note), the row can be deleted from tools/corrections.csv
+  "WARNING correction ..." = INS changed the name to something else, check it by hand
+
+- when locations were added, removed or changed: python tools/build.py --update-sql new.sql
+  it also writes the SQL statements for an existing installation; put them into update.sql and list the changes in changelog.md
+
+- to only compare the repo with the archive, without writing: python tools/build.py --check
+
+- a new name correction: add a row to tools/corrections.csv (SIRUTA code, name in the INS file, corrected name, reason), run the script and list it in changelog.md
+
+- after the update: change the date and the numbers in README.md
+
+
+WHAT THE SCRIPT DOES (the same steps by hand, with Microsoft Access)
+
 - source: https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (latest), the "siruta.mdb" file, table "siruta_rez"
 - filtered the: "FS2" column by the following criteria:
 
 /*
 <>"     " And <>"01" And <>"02" And <>"03" And <>"04" And <>"05" And <>"06" And <>"07" And <>"08" And <>"09" And <>"10" And <>"11" And <>"12" And <>"13" And <>"14" And <>"15" And <>"16" And <>"17" And <>"18" And <>"19" And <>"20" And <>"21" And <>"22" And <>"23" And <>"24" And <>"25" And <>"26" And <>"27" And <>"28" And <>"29" And <>"30" And <>"31" And <>"32" And <>"33" And <>"34" And <>"35" And <>"36" And <>"37" And <>"38" And <>"39" And <>"40" And <>"41" And <>"42"
 */
+
+  (the script takes the rows with "NIV" = 3, which are the same rows)
 
 - you can order the database by the SIRUTA
 
@@ -15,7 +48,7 @@
 
 - correct the case: de, din, lui, cu, pe, sub, la, în, Ii, cel, the space after dot "C.A." to "C. A. "
 
-- apply again the name corrections listed in changelog.md, as long as the INS file still contains the mistakes
+- apply again the name corrections listed in changelog.md (tools/corrections.csv), as long as the INS file still contains the mistakes
 
 - in the data files use single quotes for the names and keep "SET NAMES utf8mb4;" on the first line
 

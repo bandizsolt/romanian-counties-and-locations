@@ -15,6 +15,8 @@ Checked against SIRUTA S1 2026 (register last updated by INS on 30.06.2026). The
 - `update.sql`: update script for an existing installation. It adds the `county_abbr`, `uat_siruta` and `uat_name` columns and applies the corrected names by SIRUTA code. It works with both data files and keeps the letter case of the installation.
 - `source/SIRUTA_S1_2026.rar`: the INS archive this version was checked against. The 2023 archive is kept.
 - `.gitattributes`: the same line endings (LF) for all text files.
+- `tools/build.py`: script that builds `data.sql` and `data_corrected_character_casing.sql` from the INS archive, without Microsoft Access (see `notes.txt`). It reads `SIRUTA.xls`, or the `siruta_rez` table of `siruta.mdb` when the archive has no `SIRUTA.xls`. From `source/SIRUTA_S1_2026.rar` both give exactly the two data files of this version, byte for byte. With `--update-sql` it also writes the SQL statements for an existing installation when locations are added, removed or changed.
+- `tools/corrections.csv`: all the name corrections listed below in one file (SIRUTA code, name in the INS file, corrected name, reason). The script applies a correction only while the INS file still has the old name, and reports the ones INS has corrected.
 
 ### Changed in the SQL files
 
@@ -223,6 +225,8 @@ One of these names is written in two ways inside the INS file itself: the villag
 Not listed: the names where OpenStreetMap only leaves out the hyphen (42 names, for example FRASIN-DEAL / FRASIN DEAL), where it still has an INS spelling mistake that is corrected here, or where it uses a different local name.
 
 **Mistakes that are only in the second INS table.** The `siruta.mdb` file of S1 2026 has two tables, `siruta_rez` and `SIR_DIACRITIC`. This database follows `siruta_rez`. `SIR_DIACRITIC` has these different forms, which were not taken over: CIOFLINCENI (105188, correct: CIOFLICENI), ROMĂNEȘTI (107476, correct: ROMÂNEȘTI), GRESU (178144, correct: GREȘU), POPEȘTI LEORDENI (179542, correct: POPEȘTI-LEORDENI). It also still has the old forms BÂLVĂNEȘTII DE JOS (110704) and ABRĂMUT (27178).
+
+**Differences between `SIRUTA.xls` and `siruta.mdb`.** The S1 2026 archive also has the file `SIRUTA.xls`, with the same 16978 rows as the `siruta_rez` table. The codes, the counties and the parent units are identical. Only four names differ, and `SIRUTA.xls` has the correct form in all four: NĂDAB (9477; `siruta_rez`: NADAB), HĂINEALA (24392; HÂINEALA), SILIVAȘU DE CÂMPIE (34431 and the commune 34422; SILIVAIȘU DE CÂMPIE). All the other corrections listed above are needed for both files.
 
 **Reported to INS.** The corrected names and the differences between the two INS tables were sent to INS (registraturaINS@insse.ro) on 27.11.2026, with a request to confirm the official forms.
 

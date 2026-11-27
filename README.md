@@ -25,6 +25,8 @@ The territorial-administrative units themselves (municipalities, towns and commu
 | `update.sql` | Update for an existing installation (new columns and corrected names) |
 | `changelog.md` | Changes and name corrections |
 | `notes.txt` | Steps for updating the data from the INS file |
+| `tools/build.py` | Script that builds the two data files from the INS archive |
+| `tools/corrections.csv` | The name corrections applied to the INS file, with their reason |
 | `source/` | The original INS archives |
 
 ## Tables
@@ -68,6 +70,17 @@ ORDER BY label;
 
 This gives `Popești`, `Popești (Fârtățești)`, `Popești (Golești)` and so on.
 
+## Building the data files
+
+The two data files are built from the INS archive with a script, so the result can be checked by anyone:
+
+```
+pip install -r tools/requirements.txt
+python tools/build.py
+```
+
+It unpacks the newest archive from `source/`, reads `SIRUTA.xls` (or the `siruta_rez` table of `siruta.mdb`), replaces the cedilla letters, applies the name corrections from `tools/corrections.csv` and writes `data.sql` and `data_corrected_character_casing.sql`. `python tools/build.py --check` only compares the repository with the archive. The details are in `notes.txt`.
+
 ## Source
 
 https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (select the latest one)
@@ -107,6 +120,8 @@ Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comune
 | `update.sql` | Actualizare pentru o instalare existentă (coloanele noi și denumirile corectate) |
 | `changelog.md` | Modificări și corecturi de denumiri |
 | `notes.txt` | Pașii pentru actualizarea datelor din fișierul INS |
+| `tools/build.py` | Script care generează cele două fișiere de date din arhiva INS |
+| `tools/corrections.csv` | Corecturile de denumiri aplicate fișierului INS, cu motivul lor |
 | `source/` | Arhivele originale de la INS |
 
 ## Tabele
@@ -149,6 +164,17 @@ ORDER BY label;
 ```
 
 Rezultatul: `Popești`, `Popești (Fârtățești)`, `Popești (Golești)` și așa mai departe.
+
+## Generarea fișierelor de date
+
+Cele două fișiere de date sunt generate din arhiva INS cu un script, astfel încât rezultatul poate fi verificat de oricine:
+
+```
+pip install -r tools/requirements.txt
+python tools/build.py
+```
+
+Scriptul dezarhivează cea mai recentă arhivă din `source/`, citește `SIRUTA.xls` (sau tabela `siruta_rez` din `siruta.mdb`), înlocuiește literele cu sedilă, aplică corecturile de denumiri din `tools/corrections.csv` și scrie `data.sql` și `data_corrected_character_casing.sql`. `python tools/build.py --check` doar compară repository-ul cu arhiva. Detaliile sunt în `notes.txt`.
 
 ## Sursă
 
