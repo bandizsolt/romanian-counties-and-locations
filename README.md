@@ -1,18 +1,123 @@
-## All Romanian counties and locations (with diacritics)
-## Toate județele și localitățile din România (cu diacritice)
+# Romanian counties and locations (with diacritics)
 
-Conține toate localitățile din România (sate, localități componente și localitățile de reședință ale comunelor, orașelor și municipiilor), precum și sectoarele capitalei, grupate pe județe, cu clasificarea utilizată de **INS** (Institutul Național de Statistică) în **SIRUTA** (Sistemul Informatic al Registrului Unităților Teritorial-Administrative), în format SQL. Din această bază de date sunt eliminate unitățile administrativ-teritoriale ca atare (municipiile, orașele și comunele, care au cod SIRUTA propriu, separat de cel al localității de reședință), deoarece nu avem nevoie de ierarhia dintre localități. Pur și simplu facem legătura dintre județ și localitatea respectivă (fie sat, oraș, municipiu etc., fără a ne interesa rangul). Municipiul București este tratat ca județ, iar localitățile sale sunt cele 6 sectoare.
+**English** | [Română](#județele-și-localitățile-din-românia-cu-diacritice)
 
-Registrul SIRUTA este actualizat la fiecare 6 luni, cu modificările legislative apărute în perioada anterioară.
+All Romanian counties and locations in SQL format, with correct diacritics, based on **SIRUTA**, the official register of territorial-administrative units maintained by **INS** (the National Institute of Statistics).
 
+**Updated: 27-11-2026** · **42** counties (41 județe + București) · **13755** locations
 
-**Updated: 27-11-2026**
+## What it contains
 
-Total: **42** counties (41 județe + București) and **13755** locations (SQL format)
+- **Counties:** the 41 counties plus the Municipality of Bucharest, which is treated as a county. Each one has its INS county code and its official two-letter abbreviation (AB, CJ, B, ...).
+- **Locations:** every village, component locality and seat locality of the communes, towns and municipalities, each with its SIRUTA code and its county.
+- **Bucharest:** its locations are the 6 sectors.
 
-Each county also has its official two-letter abbreviation (`county_abbr`, e.g. AB, CJ, B), and each location has its SIRUTA code.
+The territorial-administrative units themselves (municipalities, towns and communes, which have their own SIRUTA code, separate from that of their seat locality) are left out, because the hierarchy between locations is not needed here. The database simply links each location to its county, whatever its rank.
 
-Source:
+## Files
+
+| File | Content |
+|---|---|
+| `install.sql` | Table structure |
+| `data.sql` | Data, names in upper case (as published by INS) |
+| `data_corected_character_casing.sql` | The same data, names in title case |
+| `changelog.md` | Changes and name corrections |
+| `source/` | The original INS archive |
+
+## Tables
+
+**`#__romanian_counties`**
+
+| Column | Description |
+|---|---|
+| `id` | Primary key |
+| `county_code` | INS county code (1-52) |
+| `county_abbr` | Official two-letter abbreviation (e.g. `AB`, `CJ`, `B`) |
+| `county_name` | County name |
+
+**`#__romanian_locations`**
+
+| Column | Description |
+|---|---|
+| `id` | Primary key |
+| `siruta` | SIRUTA code of the location |
+| `county_code` | INS county code, links to `#__romanian_counties.county_code` |
+| `location_name` | Location name |
+
+## Usage
+
+1. Replace the `#__` table prefix with your own prefix (or remove it).
+2. Run `install.sql`, then one of the two data files.
+
+## Source
+
 https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (select the latest one)
 
-Checked against SIRUTA S1 2026 (registry last update: 30.06.2026). Some location names are corrected compared to the INS file, see changelog.md.
+The SIRUTA register is updated every 6 months with the legislative changes of the previous period. The data here is checked against SIRUTA S1 2026 (register last updated: 30.06.2026). Some location names are corrected compared to the INS file, see `changelog.md`.
+
+## License
+
+Public domain, see `LICENSE`.
+
+---
+
+# Județele și localitățile din România (cu diacritice)
+
+[English](#romanian-counties-and-locations-with-diacritics) | **Română**
+
+Toate județele și localitățile din România în format SQL, cu diacritice corecte, pe baza **SIRUTA** (Sistemul Informatic al Registrului Unităților Teritorial-Administrative), registrul oficial gestionat de **INS** (Institutul Național de Statistică).
+
+**Actualizat: 27-11-2026** · **42** de județe (41 de județe + București) · **13755** de localități
+
+## Ce conține
+
+- **Județe:** cele 41 de județe și Municipiul București, tratat ca județ. Fiecare are codul de județ INS și abrevierea oficială de două litere (AB, CJ, B, ...).
+- **Localități:** toate satele, localitățile componente și localitățile de reședință ale comunelor, orașelor și municipiilor, fiecare cu codul SIRUTA și județul său.
+- **București:** localitățile sale sunt cele 6 sectoare.
+
+Unitățile administrativ-teritoriale ca atare (municipiile, orașele și comunele, care au cod SIRUTA propriu, separat de cel al localității de reședință) sunt eliminate, deoarece nu avem nevoie de ierarhia dintre localități. Pur și simplu facem legătura dintre județ și localitatea respectivă, fără a ne interesa rangul.
+
+## Fișiere
+
+| Fișier | Conținut |
+|---|---|
+| `install.sql` | Structura tabelelor |
+| `data.sql` | Datele, cu denumirile scrise cu majuscule (ca în fișierul INS) |
+| `data_corected_character_casing.sql` | Aceleași date, cu denumirile scrise cu inițială majusculă |
+| `changelog.md` | Modificări și corecturi de denumiri |
+| `source/` | Arhiva originală de la INS |
+
+## Tabele
+
+**`#__romanian_counties`**
+
+| Coloană | Descriere |
+|---|---|
+| `id` | Cheie primară |
+| `county_code` | Codul de județ INS (1-52) |
+| `county_abbr` | Abrevierea oficială de două litere (de ex. `AB`, `CJ`, `B`) |
+| `county_name` | Denumirea județului |
+
+**`#__romanian_locations`**
+
+| Coloană | Descriere |
+|---|---|
+| `id` | Cheie primară |
+| `siruta` | Codul SIRUTA al localității |
+| `county_code` | Codul de județ INS, legătura cu `#__romanian_counties.county_code` |
+| `location_name` | Denumirea localității |
+
+## Utilizare
+
+1. Înlocuiți prefixul `#__` al tabelelor cu prefixul propriu (sau ștergeți-l).
+2. Rulați `install.sql`, apoi unul dintre cele două fișiere de date.
+
+## Sursă
+
+https://insse.ro/cms/ro/siruta > SIRUTA SEMESTRU (selectați cel mai recent)
+
+Registrul SIRUTA este actualizat la fiecare 6 luni, cu modificările legislative apărute în perioada anterioară. Datele de aici sunt verificate cu SIRUTA S1 2026 (ultima actualizare a registrului: 30.06.2026). Unele denumiri sunt corectate față de fișierul INS, vezi `changelog.md`.
+
+## Licență
+
+Domeniu public, vezi `LICENSE`.
